@@ -9,3 +9,14 @@ Feature: Error message for the invalid card number
 
 
     #TODO: Create scenarios that cover all the acceptance criteria
+
+Background:
+    Given user is on the enrollment page
+    And user has completed start application step
+    
+
+
+
+        
+
+Scenario: Verify that immediate error message is present if the card number is wrong or too short
