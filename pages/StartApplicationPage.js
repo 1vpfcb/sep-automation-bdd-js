@@ -125,7 +125,7 @@ export class StartApplicationPage extends BasePage {
 
     this.originalPrice = page.locator("//s[contains(.,'$')]");
 
-    
+
   }
 
   /**
@@ -133,6 +133,7 @@ export class StartApplicationPage extends BasePage {
    */
   async enterFirstName(firstName) {
     await this.firstNameInputBox.fill(firstName);
+
   }
 
   /**

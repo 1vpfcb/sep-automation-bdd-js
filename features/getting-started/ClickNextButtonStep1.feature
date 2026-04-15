@@ -1,14 +1,17 @@
 @sep19
 Feature: Click on the next button on step 1
 
-    As a customer, I should be able to click on the next button on step 1 when I give valid information.
+  As a customer, I should be able to click on the next button on step 1 when I give valid information.
 
-    #* AC1: The next button should take customers to step 2 when given valid information.
-    #*              a. Test by providing all fields
-    #*              b. Test by providing only the required fields
-    
+  Background:
+    Given user is on the enrollment page
 
-    #TODO: Create scenarios that cover all the acceptance criteria
+  Scenario: Move to step 2 when all fields are filled with valid information
+    When the user enters valid information in all fields on step 1
+    And the user clicks on the Next button
+    Then the user should be taken to step 2
 
-    Background:
-        Given user is on the enrollment page
+  Scenario: Move to step 2 when only required fields are filled with valid information
+    When the user enters valid information in required fields on step 1
+    And the user clicks on the Next button
+    Then the user should be taken to step 2

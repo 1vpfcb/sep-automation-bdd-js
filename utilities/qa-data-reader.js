@@ -1,5 +1,7 @@
 // Import the required 'fs' module to read the file
 import { readFileSync } from 'fs';
+// Import the 'faker' library to generate random user data
+import { faker } from '@faker-js/faker';
 
 /**
  * @typedef {Object} PriceData
@@ -91,9 +93,17 @@ class Product {
   }
 }
 
+
 // Instantiate the Product object
 export const productInfo = new Product(JSON.parse(readFileSync('./data/qa_data.json', 'utf8')));
 
+export const userInfo = {
+  firstName: faker.person.firstName(),
+  lastName: faker.person.lastName(),
+  email: faker.internet.email(),
+  phoneNumber:  faker.string.numeric(10),
+  howDidYouHearAboutUs: 'Google'
+};
 
 
 

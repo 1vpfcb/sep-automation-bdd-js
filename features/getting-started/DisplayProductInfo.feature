@@ -15,3 +15,6 @@ Feature: Display the product information
 
     Background:
         Given user is on the enrollment page
+
+
+    
